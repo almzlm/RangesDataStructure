@@ -18,7 +18,6 @@ Functions:
 
 Assumptions :
     1 - We assume that our ranges are always SORTED in our data structure. Otherwise, we would have to sort them ourselves which would take O(nlogn) time
-    2 - For GET method, I assumed that example iii) had a typo and should return (2,3),(5,6) instead if (1,3),(5,6). This is because the description of the method states 'intersect with start AND end'
 """
 
 class Ranges:
@@ -171,8 +170,6 @@ class Ranges:
     Time Complexity : O(n) where n = number of ranges currently in the data structure
     Space complexity : O(n) where n = number of ranges currently in the data structure (since we only create an array with at-most the same number of elements)
 
-    Assumption : We assume that the example iii) given had an error and we only return the union of the given range
-
     Ex : State [(1, 3), (5, 6)]. Get(2, 9). Returns [(1, 3), (5, 6)]
 
             Parameters:
@@ -192,7 +189,6 @@ class Ranges:
   @ConvertToInt
   def GetV2(self,start:int,end:int):
     """ 
-    This is the implementation in case my assumption in Get() was wrong
 
     Gets the ranges that overlap with the input range. 
     Time Complexity : O(n) where n = number of ranges currently in the data structure
